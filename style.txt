@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f171f, #26262a);
+    padding: 20px;
+}
+
+.container{
+    width: 100%;
+    max-width: 800px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1{
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.search-box{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input{
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-box input:focus{
+    border-color: #69717a;
+}
+
+.search-box button{
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0a1b2a;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-box button:hover{
+    background-color: #012c4f;
+}
+
+#loader{
+    display: none;
+    color: #0984e3;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+#error{
+    color: red;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.weather-card{
+    display: block;
+    border: 2px solid #000000;
+    padding-top: 10px;
+}
+
+#city{
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+#icon{
+    display: none;
+    margin: 0 auto;
+}
+.weather-icon{
+    display: flex;
+    justify-content: center;
+}
+.weather-icon img{
+    width: 100px;
+    height: 100px;
+}
+#temp{
+    font-size: 28px;
+    font-weight: bold;
+    color: #0984e3;
+    margin: 10px 0;
+}
+
+#condition,
+#humidity,
+#wind,
+#dateTime{
+    margin: 8px 0;
+    color: #636e72;
+    font-size: 16px;
+}
+
+#dateTime{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+@media(max-width:600px){
+
+    .container{
+        padding: 20px;
+    }
+
+    .search-box{
+        flex-direction: column;
+    }
+
+    .search-box button{
+        width: 100%;
+    }
+
+    #temp{
+        font-size: 24px;
+    }
+}
+
+.forecast-container{
+    display: flex;
+    flex-direction:row;
+    gap: 5px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.forecast-card{
+    display: flex;
+    flex-direction: column;
+    background: rgb(0, 0, 0);
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.forecast-card img{
+    width: 60px;
+    height: 60px;
+}
